@@ -9,11 +9,34 @@ a {
    
 }
 
+
+html {
+     /*variaveis */
+     --bg-color: #EDF2FF;
+     --text-color: #00082F; 
+     --primary-color: #4263EB;
+     --primary-color-dark: #364FC7;
+ 
+}
+ 
+ body.dark {
+    --bg-color: #00082F;
+    --text-color: #FFFFFF;
+ } 
+ 
+ body.pink {
+    --bg-color: #FFF0F6;
+    --text-color: #1F0008;
+    --primary-color: #D6336C;
+    --primary-color-dark: #A61E4D;
+ }
+
+
+
 body {
-    background: #EDF2FF; 
-    font-family: 'DM Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Sora', sans-serif;
+    background: var(--bg-color); 
+    color:var(--text-color)
+    font-family: 'Roboto', sans-serif;
 }
 
 .container { 
@@ -30,13 +53,12 @@ img.avatar {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    border: #4263eb solid 4px;
+    border: var(--primary-color) solid 4px;
     padding: 3.7px;
 }
 
 h1 {
     font-size: 32px;
-    color: #00082F;
     margin-top: 24px;
     margin-bottom: 8px;
 }
@@ -44,7 +66,6 @@ h1 {
 .username {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
-    color: #00082F;
     opacity: 0.8;
     font-size: 18px;
 }
@@ -61,7 +82,7 @@ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4263eb; /* hexadecimal:  vai de zero até F */
+    background: var(--primary-color); /* hexadecimal:  vai de zero até F */
     color: white;
     text-transform: uppercase;
     font-size: 14px;
@@ -73,10 +94,14 @@ ul li a {
 }
 /* pseudo class */
 ul li a:hover {
-   background: #364FC7;
+   background: var(--primary-color-dark);
 
 
 } 
+
+ul li.whats {
+    transition: cubic-bezier(1, 0, 0, 1);
+}
 
 .li:hover {
     transform: 11 9 69789857;
@@ -85,7 +110,6 @@ ul li a:hover {
 footer {
     font-weight:500 ;
     font-size: 12px;
-    color: #00082F;
     opacity: 0.4;
     transform: opacity 400ms;
 
