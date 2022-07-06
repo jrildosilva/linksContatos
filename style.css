@@ -99,13 +99,10 @@ ul li a:hover {
 
 } 
 
-ul li.whats {
-    transition: cubic-bezier(1, 0, 0, 1);
-}
 
-.li:hover {
-    transform: 11 9 69789857;
-}
+
+
+
 
 footer {
     font-weight:500 ;
